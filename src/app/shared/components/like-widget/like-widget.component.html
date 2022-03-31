@@ -1,0 +1,18 @@
+<div class="like-widget-container" (keyup.enter)="like()" (click)="like()">
+  <img
+    width="64px"
+    height="64px"
+    src="../../../../assets/like.png"
+    role="button"
+    tabindex="0"
+    [attr.aria-describedby]="id"
+  />
+  <span 
+  [attr.id]="id"
+  [attr.aria-label]="likes + ': people liked'"
+  aria-live="true"
+  aria-atomic="true"
+  class="like-counter">
+    {{ likes }}
+  </span>
+</div>
